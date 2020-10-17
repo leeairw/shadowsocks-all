@@ -255,12 +255,12 @@ download_files(){
 
     # Download start script
     if check_sys packageManager yum; then
-        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/quniu/shadowsocks-all/master/service/shadowsocks-go; then
+        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/leeairw/shadowsocks-all/master/service/shadowsocks-go; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-go auto start script"
             exit 1
         fi
     elif check_sys packageManager apt; then
-        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/quniu/shadowsocks-all/master/service/shadowsocks-go-debian; then
+        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/leeairw/shadowsocks-all/master/service/shadowsocks-go-debian; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-go auto start script"
             exit 1
         fi
